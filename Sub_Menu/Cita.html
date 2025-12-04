@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../diseño/styles.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <headre>
+        <div class="logo-titulo">
+            <h1 class="titulo">BIENVENIDOS A VETERINARIA</h1>
+            <img src="../recursos/iconos/refugio-de-animales.png" width="40">
+        </div>
+        <div class="nav-bg">
+            <nav class="navegacion-principal contenedor">
+                <a href="../index.html">INICIO</a>
+                <a href="../Sub_Menu/Servicios.html">SERVICIOS</a>
+                <a href="../Sub_Menu/Cita.html">AGENDAR CITA</a>
+            </nav>
+        </div>
+    </headre>
+
+    <main class="main-content">
+        
+        <form id="formulario-cita" class="formulario">
+
+            <fieldset class="seccion-propietario">
+                <legend>Información del Propietario</legend>
+                
+                <div class="campo">
+                    <label for="nombre-propietario">Nombre Completo:</label>
+                    <input 
+                        type="text" 
+                        id="nombre-propietario" 
+                        placeholder="Tu nombre y apellido" 
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="telefono-propietario">Teléfono de Contacto:</label>
+                    <input 
+                        type="tel" 
+                        id="telefono-propietario" 
+                        placeholder="Ej: 999 123 4567"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email-propietario">Correo Electrónico:</label>
+                    <input 
+                        type="email" 
+                        id="email-propietario" 
+                        placeholder="Ej: correo@ejemplo.com"
+                    >
+                </div>
+            </fieldset>
+
+            <fieldset class="seccion-mascota">
+                <legend>Información de la Mascota</legend>
+
+                <div class="campo">
+                    <label for="nombre-mascota">Nombre de la Mascota:</label>
+                    <input 
+                        type="text" 
+                        id="nombre-mascota" 
+                        placeholder="Nombre de tu mascota"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="especie-mascota">Especie:</label>
+                    <select id="especie-mascota" required>
+                        <option value="" disabled selected>-- Seleccione Especie --</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="otro">Otro (Especifique en Síntomas)</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="raza-mascota">Raza (Opcional):</label>
+                    <input 
+                        type="text" 
+                        id="raza-mascota" 
+                        placeholder="Ej: Labrador, Siames"
+                    >
+                </div>
+            </fieldset>
+            
+            <fieldset class="seccion-cita">
+                <legend>Detalles de la Cita</legend>
+                
+                <div class="campo">
+                    <label for="fecha-cita">Fecha Deseada:</label>
+                    <input type="date" id="fecha-cita" required>
+                </div>
+
+                <div class="campo">
+                    <label for="hora-cita">Hora Deseada:</label>
+                    <input type="time" id="hora-cita" required min="08:00" max="18:00">
+                </div>
+
+                <div class="campo">
+                    <label for="motivo-cita">Motivo de la Cita / Síntomas:</label>
+                    <textarea 
+                        id="motivo-cita" 
+                        placeholder="Describa el motivo de la visita o los síntomas principales..."
+                        required
+                    ></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="boton-agendar">Confirmar Cita</button>
+            
+        </form>
+
+    </main>
+    
+     <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-columna">
+                <h3>Veterinaria Patitas</h3>
+                <p>Este programa fue desarrollado por Gabriel Eduardo Urgiles Reyes</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
