@@ -5,15 +5,11 @@
 }
 
 .logo-titulo {
-    /* Convierte el contenedor en un flex container */
     display: flex; 
-    /* Centra los elementos horizontalmente en el contenedor */
     justify-content: center; 
-    /* Centra los elementos verticalmente */
     align-items: center; 
 }
 
-/* 5. Estilo de la navegación */
 .nav-bg {
   background-color: #3E8ACD;;
 }
@@ -28,8 +24,7 @@
 
 .navegacion-principal {
   display: flex;
-  flex-direction: column; /*por defecto es row*/
-  /*align items: center; el justify para las columnas*/
+  flex-direction: column;
 }
 
 @media (min-width: 480px) {
@@ -42,13 +37,10 @@
   }
 }
 
-
 @media (min-width: 1400px) {
 }
 
 .navegacion-principal a {
-  /*background-color: var(--primario);
-  display: inline; si se pone block se pone hacia abajo*/
   display: block;
   text-align: center;
   color: white;
@@ -78,7 +70,7 @@
     flex-shrink: 0;
 }
 
-/* Botones */
+/* Botones Carrusel*/
 .btn-prev, .btn-next {
     position: absolute;
     top: 50%;
@@ -97,18 +89,15 @@
     background: rgba(0,0,0,0.7);
 }
 
-/* CONTENEDOR MITAD IMAGEN + MITAD TEXTO */
+/*imagenes menu*/
 .contenedor-info {
     display: flex;
-    width: 90%;
     max-width: 1100px;
     margin: 50px auto;
     background: white;
-    overflow: hidden; 
     box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
 }
 
-/* IMAGEN (50%) */
 .info-imagen {
     width: 50%;
 }
@@ -119,14 +108,13 @@
     object-fit: cover;
 }
 
-/* TEXTO (50%) */
 .info-texto {
     width: 50%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centrado vertical */
-    text-align: left;        /* Alineado a la izquierda */
+    text-align: left;        
 }
 
 .info-texto h2 {
@@ -139,7 +127,7 @@
     line-height: 1.6;
 }
 
-/* ----- FOOTER COMPLETO ----- */
+/* -----Pie de pagina----- */
 .footer {
     background-color: #3E8ACD;
     color: white;
@@ -147,16 +135,13 @@
     margin-top: 30px;
 }
 
-/* Contenedor principal */
 .footer-contenedor {
     display: flex;
     justify-content: left;  
-    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* Cada columna */
 .footer-columna {
     width: 300px;
 }
@@ -169,51 +154,27 @@
     color: #dcdcdc;
 }
 
-/* ======================================= */
-/* 1. RESET Y BASE */
-/* ======================================= */
-* {
-    /* box-sizing: border-box es esencial para el layout */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/*----------------Servicios---------------*/
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8; /* Fondo muy claro */
-    line-height: 1.6;
-    color: #333;
+    background-color: #f8f8f8;
 }
 
-/* Contenido principal: Centrado y con ancho limitado */
 main {
-    max-width: 1200px;
-    margin: 40px auto; /* Espacio arriba/abajo y centrado */
+    /*max-width: 1200px;*/
+    margin: 40px auto;
     padding: 0 20px;
 }
 
-/* ======================================= */
-/* 2. DISEÑO DE CUADRÍCULA (GRID) */
-/* ======================================= */
-
 .contenedor-servicios {
-    /* Define el contenedor como una cuadrícula flexible */
     display: grid; 
-    /* Crea 3 columnas de igual tamaño (1fr) en pantallas grandes */
     grid-template-columns: repeat(3, 1fr); 
-    /* Espacio entre las tarjetas */
     gap: 30px; 
 }
-
-/* ======================================= */
-/* 3. ESTILO INDIVIDUAL DE CADA TARJETA */
-/* ======================================= */
 
 .servicio {
     background-color: #ffffff;
     border-radius: 10px;
-    /* Sombra más profesional */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
     padding: 30px 20px;
     text-align: center;
@@ -221,104 +182,58 @@ main {
 }
 
 .servicio:hover {
-    /* Ligero levantamiento al pasar el ratón */
-    transform: translateY(-8px); 
+    transform: translateY(-8px); /*"animacion entre muchas comillas"*/
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* --- ICONO --- */
+/* ------ ICONO ------ */
 .servicio-icono {
-    /* Contenedor circular para el icono */
     width: 70px; 
     height: 70px;
-    background-color: #e3f2fd; /* Fondo azul claro */
+    background-color: #e3f2fd;
     border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px auto; /* Centra el icono */
-    overflow: hidden; /* Asegura que la imagen no desborde el círculo */
+    margin: 0 auto 20px auto;
+    overflow: hidden; 
 }
 
 .servicio-icono img {
-    /* Asegura que la imagen del icono se ajuste al contenedor */
     width: 60%; 
     height: 60%;
-    object-fit: contain; /* Mantiene la proporción de la imagen */
 }
 
-/* --- TÍTULO Y DESCRIPCIÓN --- */
 .servicio-titulo {
-    color: #3E8ACD; /* Color de tu tema */
+    color: #3E8ACD; 
     font-size: 1.3rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
     font-weight: 700;
 }
 
 .servicio-descripcion {
-    color: #666;
+    color: black;
     font-size: 0.95rem;
 }
 
-/* ======================================= */
-/* 4. MEDIA QUERIES (RESPONSIVE) */
-/* ======================================= */
-
-/* Para tablets (pantallas más estrechas) */
-@media (max-width: 992px) {
-    .contenedor-servicios {
-        /* Cambia a 2 columnas */
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 25px;
-    }
-}
-
-/* Para móviles */
-@media (max-width: 600px) {
-    .contenedor-servicios {
-        /* Cambia a 1 columna */
-        grid-template-columns: 1fr; 
-        gap: 20px;
-    }
-    .servicio {
-        padding: 25px;
-    }
-}
-/* ------------------------------------------------- */
-/* CONTENEDOR PRINCIPAL                              */
-/* ------------------------------------------------- */
 .main-content {
     display: flex;
     justify-content: center;
     padding: 40px 20px;
 }
 
-/* ------------------------------------------------- */
-/* FORMULARIO COMPLETO                               */
-/* ------------------------------------------------- */
+/*------Formulario-------*/
 .formulario {
     background: #ffffff;
     width: 100%;
     max-width: 750px;
     padding: 40px;
     border-radius: 18px;
-
-    /* Sombra elegante para destacarlo del fondo */
     box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
-
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Eliminamos bordes alrededor de los fieldset */
-fieldset {
-    border: none;
-    padding: 0;
-}
-
-/* Diseñamos los títulos de cada sección */
 legend {
     font-size: 1.4rem;
     font-weight: 700;
@@ -326,9 +241,6 @@ legend {
     color: #333;
 }
 
-/* ------------------------------------------------- */
-/* CAMPOS                                            */
-/* ------------------------------------------------- */
 .campo {
     display: flex;
     flex-direction: column;
@@ -352,24 +264,11 @@ legend {
     transition: 0.3s ease;
 }
 
-/* Efecto al escribir en un input */
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus {
-    border-color: #8bc34a;  /* verde suave */
-    background: #fff;
-    outline: none;
-    box-shadow: 0px 0px 8px rgba(139,195,74,0.3);
-}
-
 textarea {
     resize: vertical;
     min-height: 110px;
 }
 
-/* ------------------------------------------------- */
-/* BOTÓN                                             */
-/* ------------------------------------------------- */
 .boton-agendar {
     background: #4caf50;
     color: white;
@@ -383,6 +282,5 @@ textarea {
 }
 
 .boton-agendar:hover {
-    background: #43a047;
     transform: translateY(-2px);
 }
